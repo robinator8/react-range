@@ -160,7 +160,7 @@ export function assertUnreachable(x: never): never {
  * @param value - Thumb value, not label value
  * @param separator - Label separator value
  */
-const getThumbWidth = (thumbEl: Element, value: number, separator: string) => {
+export const getThumbWidth = (thumbEl: Element, value: number, separator: string) => {
   const width = Math.ceil(
     [thumbEl, ...Array.from(thumbEl.children)].reduce(
       (width: number, el: Element) => {
@@ -203,7 +203,7 @@ const getThumbWidth = (thumbEl: Element, value: number, separator: string) => {
  * @param separator - String separator for merged label values
  * @returns overlaps - Array of all overlapping thumbs from the index
  */
-const getOverlaps = (
+export const getOverlaps = (
   index: number,
   offsets: { x: number; y: number }[],
   thumbs: Element[],
